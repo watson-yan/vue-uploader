@@ -47,6 +47,10 @@
                 this.$refs.file.click()
             },
             submit() {
+                if (this.files.length === 0) {
+                    console.warn('no file!');
+                    return
+                }
                 const formData = new FormData()
                 this.files.forEach((item) => {
                     formData.append(item.name, item.file)
@@ -60,9 +64,9 @@
                     this.uploading = false
                     if (xhr.status === 200 || xhr.status === 304) {
                         this.status = 'finished'
-                        console.log('上传成功')
+                        console.log('upload success!')
                     } else {
-                        console.log(`上传错误：错误代码${this.status}`)
+                        console.log(`error：error code ${xhr.status}`)
                     }
                 }
             },
