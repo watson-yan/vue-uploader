@@ -2,7 +2,7 @@
 将之前项目中使用到的一个文件上传组件提取出来，单独做一个图片上传组件
 
 ### 预览图
-![预览图](https://github.com/watson-yan/vue-uploader/blob/master/static/preview.png)
+<img src="https://github.com/watson-yan/vue-uploader/blob/master/static/preview.png" width="502" height="400"/>
 
 #### How to start
 * 下载依赖项/install dependencies
