@@ -1,4 +1,4 @@
-### Picture uploader - Vue.2X
+## Picture uploader - Vue2.X
 将之前项目中使用到的一个文件上传组件提取出来，单独做一个图片上传组件
 
 #### How to start
