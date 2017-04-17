@@ -4,7 +4,7 @@
 
 ### 预览图
 (忽略图片的内容，因为都是表情包)
-![预览图](https://github.com/watson-yan/vue-uploader/static/preview.png)
+<img src="https://github.com/watson-yan/vue-uploader/blob/master/static/preview.png" width="502" height="400"/>
 
 #### How to start
 * 下载依赖项/install dependencies
