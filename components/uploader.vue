@@ -90,6 +90,7 @@
                         this.files.push(item)
                     }
                 }
+                this.$refs.file.value = ''
             },
             // 将图片文件转成BASE64格式
             html5Reader(file, item){

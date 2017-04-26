@@ -7095,6 +7095,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$refs.file.click();
         },
         submit() {
+            if (this.files.length === 0) {
+                console.warn('no file!');
+                return;
+            }
             const formData = new FormData();
             this.files.forEach(item => {
                 formData.append(item.name, item.file);
@@ -7108,9 +7112,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.uploading = false;
                 if (xhr.status === 200 || xhr.status === 304) {
                     this.status = 'finished';
-                    console.log('上传成功');
+                    console.log('upload success!');
                 } else {
-                    console.log(`上传错误：错误代码${ this.status }`);
+                    console.log(`error：error code ${ xhr.status }`);
                 }
             };
         },
@@ -7122,6 +7126,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.files.splice(index, 1);
         },
         fileChanged() {
+            console.warn('changed');
             const list = this.$refs.file.files;
             for (let i = 0; i < list.length; i++) {
                 if (!this.isContain(list[i])) {
@@ -7134,6 +7139,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     this.files.push(item);
                 }
             }
+            this.$refs.file.value = '';
         },
         // 将图片文件转成BASE64格式
         html5Reader(file, item) {
@@ -7462,7 +7468,11 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h4', [_vm._v("基于Vue.2X的html5上传图片组件")]), _vm._v(" "), _c('div', [_c('uploader', {
+  return _c('div', [_c('h4', [_vm._v("基于Vue.2X的html5上传图片组件")]), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "width": "502px"
+    }
+  }, [_c('uploader', {
     attrs: {
       "src": '/api/imgs'
     }

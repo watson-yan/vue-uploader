@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h4>基于Vue.2X的html5上传图片组件</h4>
-		<div>
+		<div style="width: 502px;">
 			<uploader :src="'/api/imgs'"></uploader>
 		</div>
 	</div>
