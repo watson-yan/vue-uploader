@@ -20,7 +20,7 @@
 ``` javascript
 <uploader :src="'/api/imgs'"></uploader>
 ```
-（该组件源码为components文件夹下面的uploader.vue文件， 其余文件是搭建了一个建议的框架和后端配置（为了测试上传进度））
+（该组件源码为components文件夹下面的uploader.vue文件， 其余文件是搭建了一个简易的框架和后端配置（为了测试上传进度））
 
 * Props:
 
