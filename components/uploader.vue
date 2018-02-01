@@ -101,12 +101,7 @@
                 reader.readAsDataURL(file)
             },
             isContain(file) {
-                this.files.forEach((item) => {
-                    if(item.name === file.name && item.size === file.size) {
-                        return true
-                    }
-                })
-                return false
+              return this.files.find((item) => item.name === file.name && item.size === file.size)
             },
             uploadProgress(evt) {
                 const component = this
